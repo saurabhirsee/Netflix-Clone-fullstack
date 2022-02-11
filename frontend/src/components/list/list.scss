@@ -1,0 +1,47 @@
+.list{
+    width: 100%;
+    margin-top: 10px;
+
+    .listTitle{
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        margin-left: 50px;
+    }
+
+    .wrapper{
+        position: relative;
+        .sliderArrow{
+            width: 50px;
+            height: 100%;
+            // background-color: rgb(22,22,22,0.5);\
+            
+            color: rgb(170, 10, 10);
+            position: absolute;
+            z-index: 99;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            cursor: pointer;
+
+            &.left{
+                left: 0;
+                background: linear-gradient(to right, #0b0b0b 10%,rgba(11,11,11,.98) 20%,rgba(11,11,11,.97) 25%,rgba(11,11,11,.95) 35%,rgba(11,11,11,.94) 40%,rgba(11,11,11,.92) 45%,rgba(11,11,11,.9) 50%,rgba(11,11,11,.87) 55%,rgba(11,11,11,.82) 60%,rgba(11,11,11,.75) 65%,rgba(11,11,11,.63) 70%,rgba(11,11,11,.45) 75%,rgba(11,11,11,.27) 80%,rgba(11,11,11,.15) 85%,rgba(11,11,11,.08) 90%,rgba(11,11,11,.03) 95%,rgba(11,11,11,0) 100%);
+            }
+
+            &.right{
+                right: 0;
+                background: linear-gradient(to left, #0b0b0b 10%,rgba(11,11,11,.98) 20%,rgba(11,11,11,.97) 25%,rgba(11,11,11,.95) 35%,rgba(11,11,11,.94) 40%,rgba(11,11,11,.92) 45%,rgba(11,11,11,.9) 50%,rgba(11,11,11,.87) 55%,rgba(11,11,11,.82) 60%,rgba(11,11,11,.75) 65%,rgba(11,11,11,.63) 70%,rgba(11,11,11,.45) 75%,rgba(11,11,11,.27) 80%,rgba(11,11,11,.15) 85%,rgba(11,11,11,.08) 90%,rgba(11,11,11,.03) 95%,rgba(11,11,11,0) 100%);
+            }
+        }
+        .container{
+            margin-left: 50px;
+            margin-top: 10px;
+            display: flex;
+            width: max-content;
+            transform: translateX(0px);
+            transition: all 0.2s ease;
+
+        }
+    }
+}

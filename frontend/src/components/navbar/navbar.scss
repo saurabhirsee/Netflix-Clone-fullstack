@@ -1,0 +1,104 @@
+@import "../../app.scss";
+
+.navbar{
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: linear-gradient(to top, transparent 0%, rgb(0,0,0,0.3) 50%);
+
+    &.scrolled{
+        height: 100px;
+        background: linear-gradient(to bottom, #0b0b0b 10%,rgba(11,11,11,.98) 20%,rgba(11,11,11,.97) 25%,rgba(11,11,11,.95) 35%,rgba(11,11,11,.94) 40%,rgba(11,11,11,.92) 45%,rgba(11,11,11,.9) 50%,rgba(11,11,11,.87) 55%,rgba(11,11,11,.82) 60%,rgba(11,11,11,.75) 65%,rgba(11,11,11,.63) 70%,rgba(11,11,11,.45) 75%,rgba(11,11,11,.27) 80%,rgba(11,11,11,.15) 85%,rgba(11,11,11,.08) 90%,rgba(11,11,11,.03) 95%,rgba(11,11,11,0) 100%);
+    }
+
+    .container{
+        padding: 0px 50px;
+        display: flex;
+        align-items: center;
+        height: 70px;
+        justify-content: space-between;
+        @include mobile {
+            font-size: 12px;
+        }
+
+        .left{
+            display: flex;
+            align-items: center;
+
+            img{
+                height: 25px;
+                margin-right: 30px;
+                @include mobile {
+                    // display: none;
+                    height: 10px;
+                }
+            }
+
+            span{
+                margin-right: 20px;
+
+                @include tablet {
+                    display: none;
+                  }
+          
+                &.navbarmainLinks {
+                    @include tablet {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .right{
+            display: flex;
+            align-items: center;
+
+            .hd{
+                @include mobile {
+                    display: none;
+                }
+            }
+
+            img{
+                height: 30px;
+                width: 30px;
+                border-radius: 5px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+
+            .icon{
+                margin: 0px 15px;
+                cursor: pointer;
+            }
+
+            .profile{
+                .options{
+                    display: none;
+                    background-color: var(--main-color);
+                    border-radius: 5px;
+                }
+
+                span{
+                    padding: 10px;
+                    cursor: pointer;
+                }
+
+
+                &:hover{
+                    .options{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+
+        
+    }
+
+}
